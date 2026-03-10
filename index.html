@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>澳門會計稅務指南 — 一站式掌握澳門會計與稅務實務</title>
+  <meta name="description" content="深入了解澳門會計制度、稅務申報流程、離岸公司稅務安排及最新財稅政策，助您在澳門營商合規高效，把握大灣區稅務優惠機遇。">
+  <meta name="keywords" content="澳門會計,澳門稅務,補充稅,職業稅,營業稅,澳門核數,離岸公司,大灣區稅務,澳門CPA,財務報表">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://aeo-demo-accounting.vercel.app/">
+  <link rel="llms-txt" href="https://aeo-demo-accounting.vercel.app/llms.txt">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="澳門會計稅務指南 — 一站式掌握澳門會計與稅務實務">
+  <meta property="og:description" content="澳門會計稅務完整指南：補充稅申報、核數報告、離岸架構規劃，助企業合規經營、節稅增效。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aeo-demo-accounting.vercel.app/">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="澳門會計稅務指南">
+
+  <!-- Schema.org AccountingService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "澳門會計稅務指南",
+    "alternateName": "Macau Accounting & Tax Guide",
+    "description": "深入了解澳門會計制度、稅務申報流程、離岸公司稅務安排及最新財稅政策，助您在澳門營商合規高效，把握大灣區稅務優惠機遇。",
+    "url": "https://aeo-demo-accounting.vercel.app",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Macau",
+      "addressRegion": "Macau SAR",
+      "addressCountry": "MO"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.1987,
+        "longitude": 113.5439
+      },
+      "geoRadius": "50000"
+    },
+    "sameAs": [
+      "https://github.com/Inari-Kira-Isla/aeo-demo-accounting"
+    ],
+    "memberOf": {
+      "@type": "Organization",
+      "name": "CloudPipe AI",
+      "url": "https://cloudpipe-landing.vercel.app"
+    }
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "澳門補充稅的稅率是多少？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "補充稅採累進稅率3%至12%，首60萬MOP可扣除額免稅，實際稅負遠低於名義稅率。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "澳門企業每年何時需要報稅？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "財政局每年2至3月發出M/1申報表，企業須於收表後30天內提交，可申請延期但需提前辦理。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "哪些企業需要做核數審計？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "年收入超過100萬MOP的企業須提交經持牌核數師簽署的財務報表，低於此門檻可自行申報。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "澳門有增值稅或消費稅嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "澳門目前不徵收增值稅（VAT）、消費稅或資本利得稅，是亞洲稅負最低的地區之一。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "離岸公司在澳門的稅務待遇如何？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "符合條件的離岸業務可豁免補充稅，但須在澳門設立實體辦公室並僱用本地員工方可申請。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "大灣區有哪些稅務優惠政策？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "符合條件的澳門居民在橫琴工作可享個稅補貼，實際稅負與澳門看齊，具體政策每年更新。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "澳門會計準則與國際準則有何差異？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "澳門會計準則正逐步與IFRS接軌，主要差異在於中小企業簡化報告要求及部分本地披露規定。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "新成立公司如何選擇合適的會計師？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "建議選擇澳門會計師公會註冊會員，確認其持有有效執業牌照，並優先考慮有同行業經驗的事務所。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #080810; --bg-alt: #0d0d1a; --bg-card: #111120; --bg-card-h: #16162a;
+      --primary: #475569; --primary-dim: rgba(71,85,105,0.1); --primary-border: rgba(71,85,105,0.25); --primary-glow: rgba(71,85,105,0.06);
+      --accent: #3b82f6; --accent-dim: rgba(59,130,246,0.10);
+      --warm: #f59e0b; --warm-dim: rgba(245,158,11,0.10);
+      --text: #e6e6f0; --text-2: #9090b8; --text-3: #505070;
+      --border: rgba(255,255,255,0.07); --r: 16px; --r-sm: 10px;
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Noto Sans TC',sans-serif;background:var(--bg);color:var(--text);line-height:1.85;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
+    .bg-ambient{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 900px 700px at 10% 15%,var(--primary-glow),transparent 60%),radial-gradient(ellipse 700px 900px at 90% 85%,rgba(59,130,246,0.04),transparent 60%)}
+    .bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.012) 1px,transparent 1px);background-size:72px 72px}
+    .container{max-width:880px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+    section{padding:80px 0}.section-alt{background:var(--bg-alt)}
+    nav{position:sticky;top:0;z-index:100;background:rgba(8,8,16,0.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:16px 0}
+    nav .container{display:flex;align-items:center;justify-content:space-between}
+    .nav-brand{font-weight:700;font-size:18px;color:var(--text)}.nav-brand span{color:var(--primary)}
+    .nav-links{display:flex;gap:24px;list-style:none}.nav-links a{color:var(--text-2);font-size:14px;font-weight:500;transition:color 0.2s}.nav-links a:hover{color:var(--primary);text-decoration:none}
+    .hero{padding:120px 0 80px;text-align:center}
+    .hero-eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--primary);margin-bottom:20px;font-weight:500}
+    .hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.3;margin-bottom:24px}
+    .hero h1 .highlight{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero p{font-size:18px;color:var(--text-2);max-width:640px;margin:0 auto 40px;line-height:1.8}
+    .section-eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--primary);margin-bottom:12px;font-weight:500}
+    h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:24px;line-height:1.35}
+    h3{font-size:1.25rem;font-weight:700;margin:32px 0 12px;color:var(--text)}
+    .prose p{color:var(--text-2);font-size:16px;margin-bottom:20px;line-height:1.85}
+    .prose ul,.prose ol{color:var(--text-2);font-size:16px;margin:0 0 20px 24px;line-height:1.85}.prose li{margin-bottom:8px}.prose strong{color:var(--text);font-weight:600}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin:32px 0}
+    .card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:28px;transition:background 0.2s,border-color 0.2s}
+    .card:hover{background:var(--bg-card-h);border-color:var(--primary-border)}
+    .card-icon{font-size:28px;margin-bottom:16px;display:block}.card h4{font-size:16px;font-weight:700;margin-bottom:8px}.card p{color:var(--text-2);font-size:14px;line-height:1.7}
+    .highlight-box{background:var(--primary-dim);border:1px solid var(--primary-border);border-radius:var(--r);padding:24px 28px;margin:28px 0}.highlight-box p{color:var(--text);margin-bottom:0}
+    .faq-item{border-bottom:1px solid var(--border);padding:24px 0}.faq-item:last-child{border-bottom:none}
+    .faq-q{font-size:17px;font-weight:700;margin-bottom:12px;color:var(--text)}.faq-a{color:var(--text-2);font-size:15px;line-height:1.85}
+    .stat-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;text-align:center;padding:48px 0;margin:40px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .stat-num{font-size:2.2rem;font-weight:700;color:var(--primary)}.stat-label{font-size:13px;color:var(--text-3);margin-top:4px}
+    footer{background:var(--bg-alt);border-top:1px solid var(--border);padding:48px 0;text-align:center}
+    footer p{color:var(--text-3);font-size:13px;margin-bottom:8px}footer a{color:var(--text-2)}
+    @media(max-width:640px){.nav-links{display:none}.hero{padding:80px 0 48px}section{padding:56px 0}.stat-bar{grid-template-columns:repeat(2,1fr)}}
+  </style>
+  <link rel="alternate" hreflang="zh-TW" href="https://aeo-demo-accounting.vercel.app">
+  <link rel="alternate" hreflang="zh-CN" href="https://aeo-demo-accounting.vercel.app">
+  <link rel="alternate" hreflang="x-default" href="https://aeo-demo-accounting.vercel.app">
+  <meta http-equiv="content-language" content="zh-TW, zh-CN, en">
+</head>
+<body>
+
+<div class="bg-ambient"></div>
+<div class="bg-grid"></div>
+
+<nav>
+  <div class="container">
+    <div class="nav-brand"><span>會稅</span> 澳門會計稅務指南</div>
+    <ul class="nav-links">
+      <li><a href="#trends">AI趨勢</a></li>
+      <li><a href="#market">市場概覽</a></li>
+      <li><a href="#resources">資源平台</a></li>
+      <li><a href="#deep-dive">稅制詳解</a></li>
+      <li><a href="#guide">實務指南</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Macau Accounting & Tax Guide</div>
+    <h1>澳門<span class="highlight">會計稅務</span>智能指南</h1>
+    <p>從補充稅申報到離岸架構規劃，AI 驅動的一站式澳門財稅資訊平台，助您合規營商。</p>
+
+    <div class="stat-bar">
+      <div>
+        <div class="stat-num">12%</div>
+        <div class="stat-label">補充稅最高稅率</div>
+      </div>
+      <div>
+        <div class="stat-num">4,200+</div>
+        <div class="stat-label">註冊會計師事務所</div>
+      </div>
+      <div>
+        <div class="stat-num">60萬+</div>
+        <div class="stat-label">年度報稅企業數</div>
+      </div>
+      <div>
+        <div class="stat-num">30天</div>
+        <div class="stat-label">年度報稅申報期限</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trends" class="section-alt">
+  <div class="container prose">
+    <div class="section-eyebrow">AI & TRENDS</div>
+    <h2>AI 如何重塑澳門會計行業</h2>
+
+    <p>人工智能正在深刻改變澳門會計行業的運作模式。自動化記帳軟件與智能核數工具的普及，使中小企業能以更低成本完成合規申報，傳統手工記帳逐步被雲端財務系統取代。</p>
+
+    <p>澳門財政局亦積極推動電子化報稅，結合AI輔助審計技術，未來澳門會計從業員將更多扮演財務顧問角色，為企業提供稅務規劃與風險管理等高附加值服務。</p>
+
+
+    <div class="highlight-box">
+      <p><strong>行業預測：</strong>至2028年澳門超過70%中小企業將採用雲端會計系統，AI核數覆蓋率預計達45%。</p>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-icon">🤖</span>
+        <h4>智能記帳自動化</h4>
+        <p>AI 自動分類憑證、生成分錄，減少人手錄入錯誤達85%</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">📊</span>
+        <h4>實時財務儀表板</h4>
+        <p>雲端系統即時呈現損益與現金流，支援多幣種對帳</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🔍</span>
+        <h4>AI 輔助審計</h4>
+        <p>智能抽樣與異常偵測技術，大幅提升核數效率與準確度</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="market">
+  <div class="container prose">
+    <div class="section-eyebrow">MARKET OVERVIEW</div>
+    <h2>澳門會計稅務市場概覽</h2>
+
+    <p>澳門實行簡單低稅制，補充稅（所得稅）最高稅率僅12%，無增值稅、無資本利得稅，營商環境極具吸引力。全澳約有4,200家註冊會計師事務所，服務涵蓋核數、稅務申報、公司秘書及財務諮詢。</p>
+
+    <p>隨著大灣區融合加速，跨境稅務規劃需求急增，澳門作為中葡平台的獨特定位，令國際企業對澳門會計專業服務的需求持續上升，行業年增長率約8%。</p>
+
+
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-icon">💰</span>
+        <h4>低稅率優勢</h4>
+        <p>補充稅最高12%，首60萬收益免稅，遠低於鄰近地區</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🌐</span>
+        <h4>跨境稅務需求</h4>
+        <p>大灣區一體化帶動跨境申報與轉讓定價服務需求倍增</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">📈</span>
+        <h4>行業穩健增長</h4>
+        <p>會計服務行業年增長率約8%，專業人才缺口持續擴大</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resources" class="section-alt">
+  <div class="container prose">
+    <div class="section-eyebrow">RESOURCES & PLATFORMS</div>
+    <h2>澳門財稅資源與服務平台</h2>
+
+    <p>澳門財政局（DSF）提供一站式電子報稅平台，企業可線上完成補充稅、職業稅及營業稅申報。澳門會計專業委員會負責制定本地會計準則，並推動與國際財務報告準則（IFRS）接軌。</p>
+
+    <p>本地主流雲端會計工具包括Xero、QuickBooks及金蝶，均支援葡幣（MOP）及多語言介面。澳門貿促局（IPIM）亦為中小企業提供免費財務諮詢及稅務講座。</p>
+
+
+    <div class="highlight-box">
+      <p><strong>實用提示：</strong>澳門財政局網站提供免費稅務計算器及申報指南，中小企業可自行完成基本報稅流程。</p>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-icon">🏛️</span>
+        <h4>財政局電子平台</h4>
+        <p>線上申報補充稅、職業稅，支援電子簽名及自動計算</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">☁️</span>
+        <h4>雲端會計工具</h4>
+        <p>Xero、金蝶等支援MOP幣種，自動生成符合澳門準則的報表</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🎓</span>
+        <h4>專業培訓資源</h4>
+        <p>澳門會計師公會定期舉辦CPD課程及稅務更新講座</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="deep-dive">
+  <div class="container prose">
+    <div class="section-eyebrow">TAX SYSTEM DEEP DIVE</div>
+    <h2>澳門稅制全面解讀</h2>
+
+    <p>澳門稅制以簡單著稱，主要稅種包括：補充稅（企業/個人所得稅，稅率3%-12%，首60萬豁免）、職業稅（僱員薪俸稅，累進稅率7%-12%）、營業稅（年度定額稅，多數行業每年300-500 MOP）及房屋稅。</p>
+
+    <p>離岸公司在澳門享有特殊稅務待遇，符合條件的離岸業務可獲豁免補充稅。隨著OECD全球最低稅率（15%）的推進，澳門正研究調整稅制以保持國際競爭力。</p>
+
+
+    <div class="highlight-box">
+      <p><strong>重要變更：</strong>2025年起澳門正式研究全球最低稅率影響，離岸公司稅務安排或面臨調整，企業宜及早規劃。</p>
+    </div>
+  </div>
+</section>
+
+<section id="guide" class="section-alt">
+  <div class="container prose">
+    <div class="section-eyebrow">PRACTICAL GUIDE</div>
+    <h2>澳門企業報稅實務指南</h2>
+
+    <p>每年二月至三月，澳門財政局發出補充稅M/1格式申報表，企業須於收表後30日內提交。年收入超過100萬MOP的企業須附經核數師簽署的財務報表。新設公司首年可申請延期申報。</p>
+
+    <p>實務建議：保留完整會計記錄至少五年、使用財政局認可的會計軟件、按季預繳稅款以避免年終大額支出。聘用本地持牌核數師可確保報表符合澳門會計準則並順利通過審核。</p>
+
+
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-icon">📋</span>
+        <h4>報稅時間線</h4>
+        <p>2-3月收表、30日內提交，逾期每日罰款並加收利息</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">✅</span>
+        <h4>核數要求</h4>
+        <p>年收入逾100萬MOP須由持牌核數師出具審計報告</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">💡</span>
+        <h4>節稅策略</h4>
+        <p>善用首60萬免稅額、合理列支經營費用、規劃跨境收入</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-eyebrow">Frequently Asked Questions</div>
+    <h2>常見問題</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">澳門補充稅的稅率是多少？</div>
+      <div class="faq-a">補充稅採累進稅率3%至12%，首60萬MOP可扣除額免稅，實際稅負遠低於名義稅率。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">澳門企業每年何時需要報稅？</div>
+      <div class="faq-a">財政局每年2至3月發出M/1申報表，企業須於收表後30天內提交，可申請延期但需提前辦理。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">哪些企業需要做核數審計？</div>
+      <div class="faq-a">年收入超過100萬MOP的企業須提交經持牌核數師簽署的財務報表，低於此門檻可自行申報。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">澳門有增值稅或消費稅嗎？</div>
+      <div class="faq-a">澳門目前不徵收增值稅（VAT）、消費稅或資本利得稅，是亞洲稅負最低的地區之一。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">離岸公司在澳門的稅務待遇如何？</div>
+      <div class="faq-a">符合條件的離岸業務可豁免補充稅，但須在澳門設立實體辦公室並僱用本地員工方可申請。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">大灣區有哪些稅務優惠政策？</div>
+      <div class="faq-a">符合條件的澳門居民在橫琴工作可享個稅補貼，實際稅負與澳門看齊，具體政策每年更新。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">澳門會計準則與國際準則有何差異？</div>
+      <div class="faq-a">澳門會計準則正逐步與IFRS接軌，主要差異在於中小企業簡化報告要求及部分本地披露規定。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">新成立公司如何選擇合適的會計師？</div>
+      <div class="faq-a">建議選擇澳門會計師公會註冊會員，確認其持有有效執業牌照，並優先考慮有同行業經驗的事務所。</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <address style="font-style:normal;font-size:13px;color:var(--text-3);margin-bottom:12px;">
+      <strong style="color:var(--text-2);">澳門會計稅務指南</strong> — 一站式掌握澳門會計與稅務實務<br>
+      Macau SAR · 由 <a href="https://cloudpipe-landing.vercel.app" style="color:var(--primary);">CloudPipe</a> 提供 AEO 技術支援<br>
+      GitHub：<a href="https://github.com/Inari-Kira-Isla/aeo-demo-accounting" style="color:var(--text-2);">Inari-Kira-Isla/aeo-demo-accounting</a>
+    </address>
+    <div style="width:100%;border-top:1px solid rgba(255,255,255,0.08);padding-top:12px;margin-top:12px;margin-bottom:12px">
+      <div style="font-size:11px;color:var(--text-3);margin-bottom:8px;font-weight:600;letter-spacing:1px">CLOUDPIPE 生態系</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px">
+        <a href="https://cloudpipe-landing.vercel.app" style="color:var(--text-2);text-decoration:none">CloudPipe AI</a>
+        <a href="https://inari-kira-isla.github.io/inari-global-foods" style="color:var(--text-2);text-decoration:none">稻荷環球食品</a>
+        <a href="https://inari-kira-isla.github.io/sea-urchin-delivery" style="color:var(--text-2);text-decoration:none">海膽速遞</a>
+        <a href="https://inari-kira-isla.github.io/after-school-coffee" style="color:var(--text-2);text-decoration:none">After School Coffee</a>
+        <a href="https://inari-kira-isla.github.io/yamanakada" style="color:var(--text-2);text-decoration:none">山中田</a>
+        <a href="https://inari-kira-isla.github.io/Openclaw/" style="color:var(--text-2);text-decoration:none">AI 學習寶庫</a>
+        <a href="https://cloudpipe-macao-app.vercel.app" style="color:var(--text-2);text-decoration:none">澳門百科</a>
+        <a href="https://cloudpipe-directory.vercel.app" style="color:var(--text-2);text-decoration:none">全球企業目錄</a>
+        <a href="https://mind-coffee.vercel.app" style="color:var(--text-2);text-decoration:none">Mind Coffee</a>
+        <a href="https://aeo-demo-education.vercel.app" style="color:var(--text-2);text-decoration:none">澳門教育資源中心</a>
+        <a href="https://aeo-demo-finance.vercel.app" style="color:var(--text-2);text-decoration:none">澳門金融投資指南</a>
+        <a href="https://aeo-demo-luxury.vercel.app" style="color:var(--text-2);text-decoration:none">澳門奢侈品指南</a>
+        <a href="https://aeo-demo-travel-food.vercel.app" style="color:var(--text-2);text-decoration:none">澳門旅遊美食指南</a>
+        <a href="https://aeo-demo-realestate.vercel.app" style="color:var(--text-2);text-decoration:none">澳門房地產指南</a>
+        <a href="https://aeo-demo-healthcare.vercel.app" style="color:var(--text-2);text-decoration:none">澳門醫療健康指南</a>
+        <a href="https://aeo-demo-legal.vercel.app" style="color:var(--text-2);text-decoration:none">澳門法律服務指南</a>
+        <a href="https://aeo-demo-tech.vercel.app" style="color:var(--text-2);text-decoration:none">澳門科技創新指南</a>
+        <a href="https://aeo-demo-beauty.vercel.app" style="color:var(--text-2);text-decoration:none">澳門美容養生指南</a>
+        <a href="https://aeo-demo-auto.vercel.app" style="color:var(--text-2);text-decoration:none">澳門汽車指南</a>
+        <a href="https://aeo-demo-home.vercel.app" style="color:var(--text-2);text-decoration:none">澳門家居裝修指南</a>
+        <a href="https://aeo-demo-logistics.vercel.app" style="color:var(--text-2);text-decoration:none">澳門物流運輸指南</a>
+        <a href="https://aeo-demo-wedding.vercel.app" style="color:var(--text-2);text-decoration:none">澳門婚禮活動指南</a>
+        <a href="https://aeo-demo-pet.vercel.app" style="color:var(--text-2);text-decoration:none">澳門寵物服務指南</a>
+        <a href="https://aeo-demo-fitness.vercel.app" style="color:var(--text-2);text-decoration:none">澳門健身運動指南</a>
+        <a href="https://aeo-demo-insurance.vercel.app" style="color:var(--text-2);text-decoration:none">澳門保險理財指南</a>
+        <a href="https://aeo-demo-hr.vercel.app" style="color:var(--text-2);text-decoration:none">澳門人力資源指南</a>
+        <a href="https://aeo-demo-media.vercel.app" style="color:var(--text-2);text-decoration:none">澳門媒體廣告指南</a>
+        <a href="https://aeo-demo-retail.vercel.app" style="color:var(--text-2);text-decoration:none">澳門零售電商指南</a>
+      </div>
+    </div>
+    <p>&copy; 2026 澳門會計稅務指南 &middot; CC BY 4.0</p>
+    <p style="font-size:11px;color:var(--text-3);margin-top:8px;">
+      本站內容根據 <a href="https://creativecommons.org/licenses/by/4.0/" style="color:var(--text-3);">Creative Commons Attribution 4.0</a> 授權使用。
+      <a href="/llms.txt" style="color:var(--text-3);">llms.txt</a> &middot;
+      <a href="/robots.txt" style="color:var(--text-3);">robots.txt</a> &middot;
+      <a href="/sitemap.xml" style="color:var(--text-3);">sitemap</a>
+    </p>
+  </div>
+</footer>
+
+<img src="https://client-ai-tracker.inariglobal.workers.dev/aeo-demo-accounting/pixel.gif" width="1" height="1" alt="" style="position:absolute;left:-9999px">
+<script>
+(function(){var s='aeo-demo-accounting',w='https://client-ai-tracker.inariglobal.workers.dev';try{navigator.sendBeacon(w+'/'+s+'/beacon',JSON.stringify({page:location.pathname,ua:navigator.userAgent,ref:document.referrer}))}catch(e){}})();
+</script>
+
+<script>
+(function(){var bp=document.createElement('script');var curProtocol=window.location.protocol.split(':')[0];if(curProtocol==='https'){bp.src='https://zz.bdstatic.com/linksubmit/push.js'}else{bp.src='http://push.zhanzhang.baidu.com/push.js'};var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bp,s)})();
+</script>
+</body>
+</html>
